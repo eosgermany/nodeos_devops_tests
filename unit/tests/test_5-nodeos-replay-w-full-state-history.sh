@@ -28,7 +28,7 @@ timeout 10 cat $log | grep -qPz "blocks replayed(.|\n)*Blockchain started;"
 
 snapshot_id=$(curl http://127.0.0.1:8888/v1/producer/create_snapshot |  jq -r '.head_block_id')
 
-sleep infinity
+#sleep infinity
 
 nodeos_kill_INT
 

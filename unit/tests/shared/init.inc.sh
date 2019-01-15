@@ -1,6 +1,6 @@
 # initialisation utils
 
-eosio_backup_dir="../eosio-backup/"
+eosio_backup_dir="../../eosio-backup/"
 
 init_nodeos_env () {
   rm -rf $1/data 
