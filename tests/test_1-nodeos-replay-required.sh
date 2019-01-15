@@ -7,7 +7,7 @@ init_scenario_block_100 .$self
 
 log=.$self/nodeos.log.$$; mkfifo $log
 
-#
+# nodeos required replay, since just the blocks.log is provided
 (
 nodeos_exec .$self \
  --wasm-runtime wabt \

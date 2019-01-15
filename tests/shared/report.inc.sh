@@ -1,8 +1,8 @@
-dt=$(date '+%d/%m/%Y %H:%M:%S');
 
-echo "$dt"
+
 
 testcase_report() {
+  dt=$(date '+%d/%m/%Y %H:%M:%S');
   name=$1
   result=$2
 

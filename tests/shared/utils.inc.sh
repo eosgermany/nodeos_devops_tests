@@ -1,4 +1,5 @@
 eosio_dist_dir="../eosio-dist/linux/eosio-1.5.3-linux-x86_64/bin"
+# eosio_dist_dir="../eosio-dist/linux/eosio-1.6.0-linux-x86_64/bin"
 
 nodeos_pid () {
   pgrep -x nodeos
