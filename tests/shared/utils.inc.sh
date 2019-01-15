@@ -10,7 +10,6 @@ nodeos_kill_INT() {
 
 nodeos_exec() {
   eosio_nodeos_dir=$1;shift
-  log=$2;shift
   $eosio_dist_dir/nodeos --data-dir $eosio_nodeos_dir/data --config-dir $eosio_nodeos_dir/config \
-  --logconf $eosio_nodeos_dir/logging.json "$@" 2>&1 | tee $log
+  --logconf $eosio_nodeos_dir/logging.json "$@"
 }
