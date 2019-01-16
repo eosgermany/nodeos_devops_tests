@@ -19,6 +19,7 @@ nodeos_exec .$self \
  --state-history-endpoint 127.0.0.1:8889 \
  --trace-history \
  --chain-state-history \
+ --filter-on "*" \
  --plugin eosio::chain_api_plugin \
  2>&1
 )|tee $log &
@@ -26,14 +27,8 @@ nodeos_exec .$self \
 sleep 10
 timeout 10 cat $log | grep -qPz "blocks replayed(.|\n)*Blockchain started;"
 
-snapshot_id=$(curl http://127.0.0.1:8888/v1/producer/create_snapshot |  jq -r '.head_block_id')
-
-#sleep infinity
-
-nodeos_kill_INT
-
 testcase_report $self $?
 nodeos_kill_INT
-clean_nodeos_env  .$self
+#clean_nodeos_env  .$self
 
 
