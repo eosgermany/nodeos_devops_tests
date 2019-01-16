@@ -24,7 +24,7 @@ nodeos_kill_INT
 
 # log=.$self/nodeos.log.$$; mkfifo $log
 
-# The replayed chain is used 
+# The replayed chain is then used 
 (
 nodeos_exec .$self \
  --wasm-runtime wabt \
