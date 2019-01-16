@@ -27,7 +27,7 @@ for i in `seq 1 5`;
  do
     echo $i
     sleep 1
-	log_curl=.$self/nodeos.log.$$.$RANDOM
+	log_curl=.$self/curl_valid.log.$$.$RANDOM
 	(
   		curl -X POST http://127.0.0.1:8888/v1/chain/get_block -d '{"block_num_or_id": "1"}' | jq \
   		2>&1
@@ -35,14 +35,14 @@ for i in `seq 1 5`;
 	cat $log_curl | grep -q "block_num"
  done    
 
-# get_block requests with invalid (-1) cause nodeos to close the socket
+# get_block requests with invalid block_num (-1) cause nodeos to close the socket
 # in the nodeos log the following error can be seen: 
 # thread-0  http_plugin.cpp:580           handle_exception     ] FC Exception encountered while processing chain.get_block
 for i in `seq 1 5`;
  do
     echo $i
     sleep 1
-	log_curl=.$self/nodeos.log.$$.$RANDOM
+	log_curl=.$self/curl_error.log.$$.$RANDOM
 	(
   		curl --max-time 2 -X POST http://127.0.0.1:8888/v1/chain/get_block -d '{"block_num_or_id": "-1"}' \
   		2>&1
