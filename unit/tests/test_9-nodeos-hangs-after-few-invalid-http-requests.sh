@@ -5,7 +5,6 @@ source "$(dirname "$0")/shared/includes.inc.sh"
 init_nodeos_env .$self
 init_scenario_block_100 .$self
 
-# ----- STEP1 -----
 log=.$self/nodeos.log.$$; mkfifo $log
 
 # Replay with producer plugin and with full state history plugin
