@@ -14,3 +14,8 @@ nodeos_exec() {
   $eosio_dist_dir/nodeos --data-dir $eosio_nodeos_dir/data --config-dir $eosio_nodeos_dir/config \
   --logconf $eosio_nodeos_dir/logging.json "$@"
 }
+
+blocklog_exec() {
+  eosio_nodeos_dir=$1;shift
+  $eosio_dist_dir/eosio-blocklog --blocks-dir $eosio_nodeos_dir/data/blocks "$@"
+}
