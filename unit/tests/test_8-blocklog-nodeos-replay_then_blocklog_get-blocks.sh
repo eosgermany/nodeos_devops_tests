@@ -5,7 +5,7 @@ source "$(dirname "$0")/shared/includes.inc.sh"
 init_nodeos_env .$self
 init_scenario_block_100 .$self
 
-# ----- STEP2 -----
+# ----- STEP1 -----
 (
 nodeos_exec .$self \
  --wasm-runtime wabt \

@@ -22,8 +22,6 @@ nodeos_kill_INT
 
 # ----- STEP2 -----
 
-# log=.$self/nodeos.log.$$; mkfifo $log
-
 # The replayed chain is then used 
 (
 nodeos_exec .$self \

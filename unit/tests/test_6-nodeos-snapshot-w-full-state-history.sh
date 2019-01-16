@@ -31,7 +31,7 @@ nodeos_kill_INT
 # ----- STEP2 -----
 
 # flip and create new environment, delete old environment
-self_old=$self; self=${self}_1
+self_old=$self; self=${self}.$RANDOM
 clean_nodeos_env  .$self
 init_nodeos_env .$self
 init_scenario_block_100 .$self
