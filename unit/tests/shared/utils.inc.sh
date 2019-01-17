@@ -1,7 +1,7 @@
 
 eosio_dist () {
     if [[ "$OSTYPE" == "linux-gnu" ]]; then
-        "linux"
+        echo "linux"
     elif [[ "$OSTYPE" == "darwin"* ]]; then
         echo "osx"
     else
