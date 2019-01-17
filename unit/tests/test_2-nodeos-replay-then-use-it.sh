@@ -1,4 +1,5 @@
-#!/bin/bash -x
+#!/bin/bash 
+
 self=`basename "$0" | sed 's/.\{3\}$//'`
 source "$(dirname "$0")/shared/includes.inc.sh"
 

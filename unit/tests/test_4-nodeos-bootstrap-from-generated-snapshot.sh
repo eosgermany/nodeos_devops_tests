@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash 
 
 # See https://github.com/EOSIO/fill-postgresql
 
