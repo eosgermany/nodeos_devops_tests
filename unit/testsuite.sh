@@ -13,3 +13,4 @@ pkill nodeos
 ( cd tests && "./test_7-blocklog-get-blocks_no_database.sh")
 ( cd tests && "./test_8-blocklog-nodeos-replay_then_blocklog_get-blocks.sh")
 ( cd tests && "./test_9-nodeos-hangs-after-few-invalid-http-requests.sh")
+( cd tests && "./test_10-nodeos-crashes-when-empty-reversible-dir-is-available.sh")
